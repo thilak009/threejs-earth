@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import './style.css'
+import earth from './earth.jpg'
 import gsap from 'gsap'
 import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
@@ -24,11 +25,12 @@ camera.position.z = 15
 //sphere
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(5,50,50)
 ,new THREE.ShaderMaterial(
-  {vertexShader: vertexShader,
+  {
+   vertexShader: vertexShader,
    fragmentShader: fragmentShader,
    uniforms:{
      globeTexture:{
-       value: new THREE.TextureLoader().load('earth.jpg')
+       value: new THREE.TextureLoader().load(earth)
      }
    }
   })
@@ -37,7 +39,8 @@ const sphere = new THREE.Mesh(new THREE.SphereGeometry(5,50,50)
 //atmosphere
 const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(5,50,50)
 ,new THREE.ShaderMaterial(
-  {vertexShader: atmosphereVertexShader,
+  {
+   vertexShader: atmosphereVertexShader,
    fragmentShader: atmosphereFragmentShader,
    blending: THREE.AdditiveBlending,
    side: THREE.BackSide
