@@ -1,7 +1,10 @@
 import vitePluginString from 'vite-plugin-string'
 
-export default{
+module.exports ={
     plugins:[
         vitePluginString()
-    ]
+    ],
+    build:{
+        chunkSizeWarningLimit: 1000
+    }
 }
