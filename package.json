@@ -1,0 +1,17 @@
+{
+  "name": "earth-threejs",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.3.4",
+    "vite-plugin-string": "^1.0.1"
+  },
+  "dependencies": {
+    "gsap": "^3.6.1",
+    "three": "^0.129.0"
+  }
+}
